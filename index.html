@@ -2,13 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Diplom</title>
 </head>
-<body>  
-<link rel="stylesheet" href="css/style.css">
-<meta charset="utf-8">
-<header class="header">
+<body>
+<header id="header" class="header">
   <div class="container">
     <div class="header-nav">
       <a href="/">
@@ -30,9 +29,58 @@
       <h1 class="header-title">блог о творчестве,спорте, и образе жизни</h1>
     </div>
 </header>
+<div class="trends-container">
+  <h2 class="post-title-trends">сейчас в тренде</h2>
+  <div class="trends-body">
+    <article class="trends-interior">
+      <div class="trends-block-body">
+      <div class="trends-block">
+          <ul class="nav-list-news">
+      <li class="nav-item-news"><a class="nav-link-news" href="#">lifestyle</a></li>
+      <li class="nav-item-news"><a class="nav-link-news" href="#">interior</a></li>
+       </ul>
+       <h2 class="trends-title">сейчас в тренде: сад на подоконнике</h2>
+       </div>
+       </div>  
+    </article>
+    <article class="trends-food">
+      <div class="trends-block-body">
+        <div class="trends-block">
+          <ul class="nav-list-news">
+      <li class="nav-item-news"><a class="nav-link-news" href="#">food</a></li>
+       </ul>
+       <h2 class="trends-title">сыры на красивых картинках из интеренете: какие они на вкус?</h2>
+      </div> 
+      </div> 
+    </article>
+    <article class="trends-travel">
+      <div class="trends-block-body">
+        <div class="trends-block">
+          <ul class="nav-list-news">
+      <li class="nav-item-news"><a class="nav-link-news" href="#">lifestyle</a></li>
+      <li class="nav-item-news"><a class="nav-link-news" href="#">travel</a></li>
+       </ul>
+       <h2 class="trends-title">собираемся в первый поход в горы</h2> 
+       </div> 
+       </div>
+    </article>
+    <article class="trends-health">
+      <div class="trends-block-body">
+        <div class="trends-block">          
+          <ul class="nav-list-news">
+      <li class="nav-item-news"><a class="nav-link-news" href="#">food</a></li>
+      <li class="nav-item-news"><a class="nav-link-news" href="#">health</a></li>
+       </ul>
+       <h2 class="trends-title">сейчас в тренде: сколько витамина в лимонах?</h2>  
+       </div>
+     </div>
+    </article> 
+  </div>
+</div>
 <div class="content">
   <div class="content-wrapper">
 <main class="content-main">
+  <div class="content-main-news">
     <article class="news">
    <img 
     class="news-photo"
@@ -139,6 +187,7 @@
         </div>
       </div>
         </article>
+        </div>
    </main>
 <aside class="content-aside">
   <section class="section-content-posts">
@@ -244,13 +293,13 @@
   <label class="mailing-group">
     <input class="email" name="input" placeholder="Ваш email-адрес" required>
     </label>
-  <button class="subscribe-mailing">Подписаться</button> 
+  <button class="subscribe-mailing" type="button">Подписаться</button>
    </form>
   </article>
  </section>
     <section class="section-content-tags">
     <article class="tags">
-  <h3 class="post-title-new">теги</h3>
+  <h2 class="post-title-new">теги</h2>
     <ul class="tags-list">
       <li class="tags-item"><a class="tags-link" href="#">fasion</a></li>
         <li class="tags-item"><a class="tags-link" href="#">music</a></li>
@@ -276,6 +325,112 @@
      </div>
    </article>
  </aside>
+ <div class="goods-container">
+  <h2 class="post-title-goods">наши изделия</h2>
+  <div class="goods-body">
+    <article class="goods-card">
+      <picture>
+        <source 
+        srcset="images/shop-item-desk1.jpg"
+        media="(min-width: 1200px)">
+        <source 
+        srcset="images/shop-item-tablet1.jpg"
+        media="(min-width: 641px)">
+          <source 
+        srcset="images/shop-item-mobile1.jpg.jpg"
+        media="(max-width: 640px)">
+        <img 
+        src="images/shop-item-desk1.jpg" 
+        alt="pillow">
+      </picture>
+      <div class="goods-block-one">
+              <h3 class="news-title">подушки на диван</h3>
+          <div class="news-content-goods">
+            <p>Набор из двух подушек с модными принтами. Видео о создании <a class="news-content-link" href="#0">здесь</a>.</p>
+          </div>
+        <footer class="product__footer">
+          <div class="product__prices">
+            <span class="product__price product__price_old">
+              <span class="product__price-value">1000</span>
+              <span class="product__rub">₽</span>
+            </span>
+            <span class="product__price">
+              <span class="product__price-value">800</span>
+              <span class="product__rub">₽</span>
+            </span>
+          </div>
+          <button class="product__button" type="button">В магазин</button>
+        </footer>
+      </div>
+    </article>
+    <article class="goods-card">
+      <picture>
+        <source 
+        srcset="images/shop-item-desk2.jpg"
+        media="(min-width: 1200px)">
+        <source 
+        srcset="images/shop-item-tablet2.jpg"
+        media="(min-width: 641px)">
+          <source 
+        srcset="images/shop-item-mobile2.jpg.jpg"
+        media="(max-width: 640px)">
+        <img 
+        src="images/shop-item-desk2.jpg" 
+        alt="doll">
+      </picture>      
+      <div class="goods-block-two">
+              <h3 class="news-title">Кукла «Зайчик»</h3>
+          <div class="news-content-goods">
+            <p>Интерьерная рукодельная кукла «Зайчик», созданию которой посвящена <a class="news-content-link" href="#0">весенняя серия постов</a> в блоге и несколько подкастов.</p>
+          </div>
+        <footer class="product__footer">
+          <div class="product__prices">
+            <span class="product__price">
+              <span class="product__price-value">3500</span>
+              <span class="product__rub">₽</span>
+            </span>
+          </div>
+          <button class="product__button" type="button">В магазин</button>
+        </footer>
+      </div>
+    </article>
+    <article class="goods-card">
+      <picture>
+        <source 
+        srcset="images/shop-item-desk3.jpg"
+        media="(min-width: 1200px)">
+        <source 
+        srcset="images/shop-item-tablet3.jpg"
+        media="(min-width: 641px)">
+          <source 
+        srcset="images/shop-item-mobile3.jpg.jpg"
+        media="(max-width: 640px)">
+        <img 
+        src="images/shop-item-desk3.jpg" 
+        alt="frame">
+      </picture>     
+      <div class="goods-block-three">
+              <h3 class="news-title">Шестиугольная рамка</h3>
+          <div class="news-content-goods">
+            <p>Необычная рамка для украшения дома из видео <a class="news-content-link" href="#0">«Как сделать рамку из подручных средств за 30 минут»</a></p>
+          </div>
+        <footer class="product__footer">
+          <div class="product__prices">
+            <span class="product__price product__price_old">
+              <span class="product__price-value">500</span>
+              <span class="product__rub">₽</span>
+            </span>
+            <span class="product__price">
+              <span class="product__price-value">400</span>
+              <span class="product__rub">₽</span>
+            </span>
+          </div>
+          <button class="product__button" type="button">В магазин</button>
+        </footer>
+      </div>
+    </article>
+  </div>
+</div>
     <footer class="footer">
       <div class="container">
         <address class="social">
@@ -292,6 +447,50 @@
         <a class="copyright" href="#0">Copyright © 2009–2016 City Blog LLC.</a>
       </div>
     </footer>
+    </div>
+</div>
+      <div class="container__popup">
+<div class="popup">
+  <batton class="popup-close">
+    <span class="popup-close-text">Закрыть окно</span>
+  </batton>
+  <form class="form">
+    <div class="form__group">
+      <label class="select-group">
+        <h3 class="popup__title">ваш фидбек</h3>
+        <span class="select-label">Как часто вы заходите на сайт?</span>
+        <select class="select">
+          <option value="almost every day" selected>Почти каждый день</option>
+          <option value="once a week">Раз в неделю</option>
+          <option value="rarely">Редко</option>
+        </select>
+      </label>
+    </div>  
+        <div class="checkbox-form-group">
+      <label class="checkbox-form">
+        <span class="checkbox-text-form">Вы подписаны на e-mail рассылку?</span>
+        <div class="form-group">
+        <label class="checkbox-group">
+         <input type="checkbox" class="checkbox" required>
+         <span class="checkbox-text">Да</span>
+         </label>
+        <label class="checkbox-group">
+         <input type="checkbox" class="checkbox" required>
+         <span class="checkbox-text">Нет</span>
+         </label>
+         </div>
+      </label>
+    </div>
+    <div class="form__text">
+      <label class="text__group">
+        <span class="span__text">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</span>
+        <input type="field__text" name="text" placeholder="Может, больше рецептов?">
+      </label> 
+    </div>
+    <button class="button__popup" type="button">отправить</button>
+  </form>
+</div>
+</div>
   </body>
 </html> 
 
