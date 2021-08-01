@@ -51,10 +51,12 @@
   max-width: 1200px;
   margin: auto;
   padding: 0 15px; 
-  z-index: 1;
-  
+  z-index: 1;  
 }
-
+#menu-toggle {
+  opacity: 0;
+  visibility: hidden;
+}
 
 .header-nav {
   display: flex;
@@ -133,7 +135,6 @@
   background-color: #b59f5b;
   opacity: 0.4;
   top: 30px;
-  #right:726px;
 }
 
 
@@ -395,15 +396,17 @@
   height: 3px;
   background-color: #b59f5b;
   opacity: 0.4;
-  top: 30px;
-  right:102px;
-  
+  top: 30px; 
 }
 
 
 .post-title-link {
  text-decoration: none;
- color: #000000; 
+ color: #000000;
+ font-family: 'Open Sans-Bold', sans-serif;
+ text-transform: uppercase;
+ font-size: 14px;
+
 }
 
 
@@ -439,7 +442,7 @@
 
 .field {
   dox-sizing: border-box;
-  max-width: 222px;
+  min-width: 222px;
   height: 50px;
   padding: 20px;
   background-color: #f4f7f6;
@@ -470,7 +473,7 @@
 
 
 .mailing {
-  width: 272px; 
+  min-width: 272px; 
 }
 
 
@@ -482,7 +485,7 @@
 
 .email{
   dox-sizing: border-box;
-  width: 272px;
+  min-width: 272px;
   height: 50px;
   padding: 20px;
   background-color: #f4f7f6;
@@ -495,7 +498,7 @@
 .subscribe-mailing{
   border: 1px solid #b59f5b;
   background-color: #b59f5b;
-  width: 272px;
+  min-width: 272px;
   height: 50px;
   font-family: 'Open Sans-Bold', sans-serif;
   font-size: 14px;
@@ -520,15 +523,18 @@
   list-style-type: none;
   border: 3px solid #f4f3f1;
   margin: 0 5px 5px 0;
-
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .tags-link{
   color: #0f0d0e;
   text-decoration: none;
   font-family: 'Open Sans-Bold', sans-serif;
   font-size: 14px;
-  padding: 0 13px;  
+  padding: 0 11px;
+  text-transform: uppercase;  
 }
 
 
@@ -620,7 +626,19 @@
   align-items: center;
 }
 
-.goods-card {
+.goods-card-one {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+}
+
+.goods-card-two {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+}
+
+.goods-card-three {
   width: 25%;
   display: flex;
   flex-direction: column;
@@ -989,33 +1007,174 @@ input[type="field__text"] {
   width: 100%;
  }
 
- .container {
+.header-nav-logo {
+  visibility: hidden;
+  opacity: 0;
+ }
+
+.container {
+  background-image: url(../svg/noemi-logo.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 250px;
+}
+
+.container {
   width: 100%;
  }
 
- .trends-container {
+.header-title {
+  font-size: 26px;
+  padding: 285px 3px 165px;
+  width: 100%;
+  margin-top: 40px;
+ }
+
+.menu-btn {
+  display: flex; 
+  align-items: center;  
+  position: absolute;
+  top: 40px;
+  right: 35px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu-btn > span,
+.menu-btn > span::before,
+.menu-btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+}
+.menu-btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu-btn > span::after {
+  content: '';
+  top: 8px;
+}
+
+.nav-list {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.container {
+  width: 100%;
+ }
+
+.post-title-trends { 
+  justify-content: center;
+  align-items: center;
+}
+
+.trends-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.trends-interior {
+  width: 98%;
+  margin-bottom: 5px;
+ }
+
+.trends-food {
+  width: 98%;
+  margin-bottom: 5px;
+ }
+
+.trends-travel {
+  width: 98%;
+  margin-bottom: 5px;
+ }
+
+.trends-health {
+  width: 98%;
+  margin-bottom: 5px;
+ }
+
+.goods-body {
   display: flex;
   flex-wrap: wrap;
  }
 
- .trends-interior {
-  width: 98%;
-  margin-bottom: 5px;
+.goods-card {
+  width: 48%;
  }
 
- .trends-food {
-  width: 98%;
-  margin-bottom: 5px;
+ .content-wrapper {
+  width: 100%;
+  padding: 0 5px;
+  display: block;
  }
 
- .trends-travel {
-  width: 98%;
-  margin-bottom: 5px;
+ .content-aside {
+  width: 100%;
+  padding-top: 40px;
  }
 
- .trends-health {
-  width: 98%;
-  margin-bottom: 5px;
+.news-travel-health {
+  margin-left: 0px;
+ }
+
+.news {
+  display: block;
+  position: relative;
+  width: 100%;
+ }
+
+.news:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 3px;
+  background-color: #ededed;
+  opacity: 0.4;
+  bottom: -20px;
+ }
+
+ .tags-item {
+  width: 23%;
+ }
+
+ .mailing-post {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+ }
+
+ .search {
+  width: 100%;
+ }
+
+ .search-group {
+  flex-grow: 1; 
+ }
+
+ .field {
+  flex-grow: 2;
+ }
+
+
+ .mailing-group {
+  width: 100%;
+ }
+
+ .email {
+  width: 100%;
+ }
+
+ .subscribe-mailing {
+  width: 100%;
  }
 
  .goods-body {
@@ -1023,8 +1182,142 @@ input[type="field__text"] {
   flex-wrap: wrap;
  }
 
- .goods-card {
-  width: 48%;
+.goods-card-one {
+  width: 76%;
+ }
+
+.goods-card-two {
+  width: 76%;
+  margin-top: 50px;
+ }
+
+.goods-card-three {
+  width: 76%;
+  margin-top: 50px;
+ }
+}
+
+@media (max-width: 640px) and (orientation: landscape) {
+
+.header {
+  background-image: url(../images/banner-mobile.jpg);
+  width: 100%;
+ }
+
+.container {
+  width: 100%;
+ }
+
+.header-title {
+  font-size: 40px;
+  width: 100%;
+  padding: 125px 45px;
+ }
+
+.menu-btn {
+  display: flex; 
+  align-items: center;  
+  position: absolute;
+  top: 40px;
+  right: 35px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu-btn > span,
+.menu-btn > span::before,
+.menu-btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+}
+.menu-btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu-btn > span::after {
+  content: '';
+  top: 8px;
+}
+
+.nav-list {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.trends-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+ }
+
+.trends-interior {
+  width: 49.7%;
+  margin-bottom: 5px;
+ }
+
+.trends-food {
+  width: 49.7%;
+  margin-bottom: 5px;
+ }
+
+.trends-travel {
+  width: 49.7%;
+  margin-bottom: 5px;
+ }
+
+.trends-health {
+  width: 49.7%;
+  margin-bottom: 5px;
+ }
+
+
+.goods-body {
+  display: flex;
+  flex-wrap: wrap;
+ }
+
+.goods-card-one {
+  width: 40%;
+ }
+
+.goods-card-two {
+  width: 40%;
+ }
+
+.goods-card-three {
+  width: 40%;
+  margin-top: 50px;
+  margin-right: 363px;
+ }
+
+.content-wrapper {
+  width: 100%;
+ }
+
+.news-travel-health {
+    margin-left: 0;
+ }
+
+.news {
+  display: block;
+  position: relative;
+ }
+
+.news:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 3px;
+  background-color: #ededed;
+  opacity: 0.4;
+  bottom: -20px;
  }
 }
 
@@ -1036,17 +1329,52 @@ input[type="field__text"] {
   width: 100%;
  }
 
- .container {
+.container {
   width: 100%;
  }
 
-  .header-title {
+.header-title {
   font-size: 40px;
   width: 100%;
   padding: 125px 45px;
  }
 
-  .trends-container {
+.menu-btn {
+  display: flex; 
+  align-items: center;  
+  position: absolute;
+  top: 40px;
+  right: 35px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu-btn > span,
+.menu-btn > span::before,
+.menu-btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+}
+.menu-btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu-btn > span::after {
+  content: '';
+  top: 8px;
+}
+
+.nav-list {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.trends-container {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -1054,124 +1382,183 @@ input[type="field__text"] {
   align-items: center;
  }
 
- .trends-interior {
+.trends-interior {
   width: 49.7%;
   margin-bottom: 5px;
  }
 
- .trends-food {
+.trends-food {
   width: 49.7%;
   margin-bottom: 5px;
  }
 
- .trends-travel {
+.trends-travel {
   width: 49.7%;
   margin-bottom: 5px;
  }
 
- .trends-health {
+.trends-health {
   width: 49.7%;
   margin-bottom: 5px;
  }
 
- .goods-body {
+
+.goods-body {
   display: flex;
   flex-wrap: wrap;
-  justify-content: ;
  }
 
- .goods-card {
+.goods-card-one {
   width: 40%;
+ }
 
+.goods-card-two {
+  width: 40%;
+ }
+
+.goods-card-three {
+  width: 40%;
+  margin-top: 50px;
+  margin-right: 363px;
+ }
+
+.content-wrapper {
+  width: 100%;
+ }
+
+.news-travel-health {
+    margin-left: 0;
+ }
+
+.news {
+  display: block;
+  position: relative;
+ }
+
+.news:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 3px;
+  background-color: #ededed;
+  opacity: 0.4;
+  bottom: -20px;
  }
 }
-
-
 
 
 @media (min-width: 641px) and (max-width: 1200px) and (orientation: landscape) {
 
- .container {
+.header {
+  background-image: url(../images/banner-bg-tablet.jpg);
   width: 100%;
- }
+}
 
-  .header-title{
+.container {
+  width: 100%;
+}
+
+.header-title {
   font-size: 40px;
   width: 100%;
   padding: 125px 45px;
- }
+}
 
-  .post-title-trends { 
+.menu-btn {
+  display: flex; 
+  align-items: center;  
+  position: absolute;
+  top: 40px;
+  right: 35px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu-btn > span,
+.menu-btn > span::before,
+.menu-btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+}
+.menu-btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu-btn > span::after {
+  content: '';
+  top: 8px;
+}
+
+.nav-list {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.post-title-trends { 
   justify-content: center;
   align-items: center;
- }
+}
 
- .trends-container {
+.trends-container {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   justify-content: center;
   align-items: center;
-
- }
-
- .trends-interior {
-  width: 24.8%;
- }
-
- .trends-food {
-  width: 24.8%;
- }
-
- .trends-travel {
-  width: 24.8%;
- }
-
- .trends-health {
-  width: 24.8%;
- }
 }
 
-@media (max-width: 640px) and (orientation: landscape) {
+.trends-interior {
+  width: 24.8%;
+}
 
- .container {
+.trends-food {
+  width: 24.8%;
+}
+
+.trends-travel {
+  width: 24.8%;
+}
+
+.trends-health {
+  width: 24.8%;
+}
+
+.goods-body {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.goods-card-one {
+  width: 30%;
+}
+
+.goods-card-two {
+  width: 30%;
+}
+
+.goods-card-three {
+  width: 30%;
+  margin-top: 50px;
+  margin-right: 443px;
+}
+
+.content-wrapper {
   width: 100%;
- }
+}
 
- .trends-container {
-  display: flex;
-  flex-wrap: wrap;
- }
-
- .trends-interior {
-  width: 48%;
-  margin-bottom: 5px;
- }
-
- .trends-food {
-  width: 48%;
-  margin-bottom: 5px;
- }
-
- .trends-travel {
-  width: 48%;
-  margin-bottom: 5px;
- }
-
- .trends-health {
-  width: 48%;
-  margin-bottom: 5px;
- }
-
- .goods-body {
-  display: flex;
-  flex-wrap: wrap;
- }
-
- .goods-card {
-  width: 48%;
+.news-travel-health {
+  margin-left: 10px;
  }
 }
+
+
+
+
 
 
 

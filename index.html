@@ -10,12 +10,19 @@
 <header id="header" class="header">
   <div class="container">
     <div class="header-nav">
+      <div class="header-nav-logo">
       <a href="/">
         <img
        width="180"
        src="svg/noemi-logo.svg" alt="логотип">
     </a>
+    </div>
   <nav class="nav">
+    <div class="hamburger-menu">
+  <input id="menu-toggle" type="checkbox" />
+  <label class="menu-btn" for="menu-toggle">
+    <span></span>
+  </label>
     <ul class="nav-list">
       <li class="nav-item"><a class="nav-link" href="#">главная</a></li>
         <li class="nav-item"><a class="nav-link" href="#">посты</a></li>
@@ -328,7 +335,7 @@
  <div class="goods-container">
   <h2 class="post-title-goods">наши изделия</h2>
   <div class="goods-body">
-    <article class="goods-card">
+    <article class="goods-card-one">
       <picture>
         <source 
         srcset="images/shop-item-desk1.jpg"
@@ -337,7 +344,7 @@
         srcset="images/shop-item-tablet1.jpg"
         media="(min-width: 641px)">
           <source 
-        srcset="images/shop-item-mobile1.jpg.jpg"
+        srcset="images/shop-item-mobile1.jpg"
         media="(max-width: 640px)">
         <img 
         src="images/shop-item-desk1.jpg" 
@@ -363,7 +370,7 @@
         </footer>
       </div>
     </article>
-    <article class="goods-card">
+    <article class="goods-card-two">
       <picture>
         <source 
         srcset="images/shop-item-desk2.jpg"
@@ -372,7 +379,7 @@
         srcset="images/shop-item-tablet2.jpg"
         media="(min-width: 641px)">
           <source 
-        srcset="images/shop-item-mobile2.jpg.jpg"
+        srcset="images/shop-item-mobile2.jpg"
         media="(max-width: 640px)">
         <img 
         src="images/shop-item-desk2.jpg" 
@@ -394,7 +401,7 @@
         </footer>
       </div>
     </article>
-    <article class="goods-card">
+    <article class="goods-card-three">
       <picture>
         <source 
         srcset="images/shop-item-desk3.jpg"
@@ -403,7 +410,7 @@
         srcset="images/shop-item-tablet3.jpg"
         media="(min-width: 641px)">
           <source 
-        srcset="images/shop-item-mobile3.jpg.jpg"
+        srcset="images/shop-item-mobile3.jpg"
         media="(max-width: 640px)">
         <img 
         src="images/shop-item-desk3.jpg" 
