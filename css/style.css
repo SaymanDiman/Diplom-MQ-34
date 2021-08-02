@@ -7,8 +7,6 @@
   box-sizing: border-box;  
 }
 
-*{ border:1px solid red; box-sizing:border-box; }
-
 @font-face {
   font-family: 'Open Sans-Regular';
   src: url(../fonts/OpenSans-Regular.ttf) format('ttf');
@@ -1222,6 +1220,7 @@ input[type="field__text"] {
   width: 100%;
  }
 
+
 .container {
   width: 100%;
  }
@@ -1263,8 +1262,7 @@ input[type="field__text"] {
 }
 
 .nav-list {
-  visibility: hidden;
-  opacity: 0;
+  display: none;
 }
 
 .trends-container {
@@ -1296,23 +1294,23 @@ input[type="field__text"] {
  }
 
 
-.goods-body {
+ .goods-body {
   display: flex;
   flex-wrap: wrap;
  }
 
 .goods-card-one {
-  width: 40%;
+  width: 76%;
  }
 
 .goods-card-two {
-  width: 40%;
+  width: 76%;
+  margin-top: 50px;
  }
 
 .goods-card-three {
-  width: 40%;
+  width: 76%;
   margin-top: 50px;
-  margin-right: 363px;
  }
 
 .content-wrapper {
@@ -1388,8 +1386,7 @@ input[type="field__text"] {
 }
 
 .nav-list {
-  visibility: hidden;
-  opacity: 0;
+display: none;
 }
 
 .trends-container {
@@ -1420,8 +1417,127 @@ input[type="field__text"] {
   margin-bottom: 5px;
  }
 
- .trends-block-body {
+
+.goods-body {
+  display: flex;
+  flex-wrap: wrap;
+ }
+
+.goods-card-one {
+  width: 40%;
+ }
+
+.goods-card-two {
+  width: 40%;
+ }
+
+.goods-card-three {
+  width: 40%;
+  margin-top: 50px;
+  margin-right: 363px;
+ }
+
+.content-wrapper {
+  width: 100%;
+ }
+
+.news-travel-health {
+    margin-left: 0;
+ }
+
+.news {
+  display: block;
+  position: relative;
+ }
+
+.news:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 3px;
+  background-color: #ededed;
+  opacity: 0.4;
+  bottom: -20px;
+ }
+}
+
+@media (min-width: 641px) and (max-width: 900px) and (orientation: landscape) {
+
+.header {
+  background-image: url(../images/banner-bg-tablet.jpg);
+  width: 100%;
+ }
+
+.container {
+  width: 100%;
+ }
+
+.header-title {
+  font-size: 40px;
+  width: 100%;
+  padding: 125px 45px;
+ }
+
+.menu-btn {
+  display: flex; 
+  align-items: center;  
+  position: absolute;
+  top: 40px;
+  right: 35px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu-btn > span,
+.menu-btn > span::before,
+.menu-btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+}
+.menu-btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu-btn > span::after {
+  content: '';
+  top: 8px;
+}
+
+.nav-list {
+display: none;
+}
+
+.trends-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+ }
+
+.trends-interior {
   width: 49.7%;
+  margin-bottom: 5px;
+ }
+
+.trends-food {
+  width: 49.7%;
+  margin-bottom: 5px;
+ }
+
+.trends-travel {
+  width: 49.7%;
+  margin-bottom: 5px;
+ }
+
+.trends-health {
+  width: 49.7%;
+  margin-bottom: 5px;
  }
 
 
@@ -1469,7 +1585,7 @@ input[type="field__text"] {
 }
 
 
-@media (min-width: 641px) and (max-width: 1200px) and (orientation: landscape) {
+@media (min-width: 900px) and (max-width: 1200px) and (orientation: landscape) {
 
 .header {
   background-image: url(../images/banner-bg-tablet.jpg);
@@ -1479,6 +1595,7 @@ input[type="field__text"] {
 .container {
   width: 100%;
 }
+
 
 .header-title {
   font-size: 40px;
@@ -1517,8 +1634,7 @@ input[type="field__text"] {
 }
 
 .nav-list {
-  visibility: hidden;
-  opacity: 0;
+display: none;
 }
 
 .post-title-trends { 
