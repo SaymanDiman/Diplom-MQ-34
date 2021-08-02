@@ -7,6 +7,8 @@
   box-sizing: border-box;  
 }
 
+*{ border:1px solid red; box-sizing:border-box; }
+
 @font-face {
   font-family: 'Open Sans-Regular';
   src: url(../fonts/OpenSans-Regular.ttf) format('ttf');
@@ -207,6 +209,12 @@
 }
 
 
+.news-photo {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
 .trends-food {
   background-image: url(../images/trend2.jpg);
   background-position: center center;
@@ -265,13 +273,13 @@
 
 
 .content-main {
-  width: 780px;
+  max-width: 780px;
 }
 
 
 .article {
   display: flex;
-  width: 260px;
+  max-width: 260px;
 }
 
 
@@ -321,12 +329,11 @@
 
 .news-title {
   display: flex;
-  width: 365px;
+  max-width: 365px;
   text-transform: uppercase;
   font-family: 'Open Sans-Bold', sans-serif;
   font-size: 20px;  
 }
-
 
 .naw-news {
   display: flex;
@@ -340,7 +347,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 320px; 
+  max-width: 320px; 
  }
 
 
@@ -812,8 +819,8 @@
   align-items: center;
   margin-bottom: 40px;
   position: fixed;
-  width: 100vw;
-  height: 100vh;
+  max-width: 390px;
+  max-height: 590px;
   justify-content: center;
   background-color: #fff;
   z-index: 999;
@@ -1012,6 +1019,10 @@ input[type="field__text"] {
   opacity: 0;
  }
 
+ .nav {
+  width: 30%;
+ }
+
 .container {
   background-image: url(../svg/noemi-logo.svg);
   background-repeat: no-repeat;
@@ -1061,8 +1072,7 @@ input[type="field__text"] {
 }
 
 .nav-list {
-  visibility: hidden;
-  opacity: 0;
+  display: none;
 }
 
 .container {
@@ -1135,7 +1145,7 @@ input[type="field__text"] {
 .news:not(:last-child)::after {
   content: "";
   position: absolute;
-  width: 360px;
+  width: 100%;
   height: 3px;
   background-color: #ededed;
   opacity: 0.4;
@@ -1194,6 +1204,14 @@ input[type="field__text"] {
 .goods-card-three {
   width: 76%;
   margin-top: 50px;
+ }
+
+ .footer {
+  width: 100%;
+ }
+
+ .container__popup {
+  width: 100%;
  }
 }
 
@@ -1402,6 +1420,10 @@ input[type="field__text"] {
   margin-bottom: 5px;
  }
 
+ .trends-block-body {
+  width: 49.7%;
+ }
+
 
 .goods-body {
   display: flex;
@@ -1528,6 +1550,11 @@ input[type="field__text"] {
   width: 24.8%;
 }
 
+.trends-block-body {
+  display: flex;
+
+}
+
 .goods-body {
   display: flex;
   flex-wrap: wrap;
@@ -1553,6 +1580,19 @@ input[type="field__text"] {
 
 .news-travel-health {
   margin-left: 10px;
+
+ }
+
+ .content-wrapper {
+  width: 100%;
+ }
+
+ .content-main {
+  width: 70%;
+ }
+
+ .content-aside {
+  width: 30%
  }
 }
 
